@@ -1,0 +1,22 @@
+{
+ "maruko": {
+  "problem": "I needed an automated way to manage my 5000+ bookmarks. Maruko is the third iteration of my ideal automation for managing bookmarks.",
+  "decisions": "I wanted it to be hands-off. No collections, no groupings. I wanted it to sort a custom \"Recent\" folder.",
+  "lessons": "The only way to talk to the browser and edit bookmarks is through an extension, so Maruko also ships a browser extension."
+ },
+ "jiraiya": {
+  "problem": "I needed a clear picture of my Jira epics. It needed to be fast.",
+  "decisions": "It copies stories to a local database.",
+  "lessons": "I haven't used Jiraiya in a minute. I don't think the idea scales."
+ },
+ "clustermap": {
+  "problem": "After playing with treemaps, I thought they could help describe a Kubernetes cluster at a glance (restarts, CPU and memory consumption, and so on).",
+  "decisions": "Clustermap doesn't store credentials. It reuses the configuration stored on the user's machine.",
+  "lessons": "Treemaps are a fast and great way to visualize many things."
+ },
+ "gus": {
+  "problem": "I am a big fan of small notation systems. GUS is my first. I needed a way to codify rhythm without taking away expressiveness.",
+  "decisions": "GUS needed to be small and versatile. I needed to translate many grooves that I know into GUS.",
+  "lessons": "Small notation systems are a great way to encode information."
+ }
+}
