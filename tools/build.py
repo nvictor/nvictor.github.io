@@ -99,12 +99,12 @@ for p in projects:
     if p.get("requirements"):
         h += f'<p>Requires {e(p["requirements"])}</p>'
     c = content.get(p["slug"], {})
-    labels = [("problem", "The problem"), ("decisions", "Key design decisions"), ("lessons", "What I learned")]
+    labels = [("problem", "The problem"), ("decisions", "Key design decisions"), ("lessons", "Lessons learned")]
     mine = [(l, c[k]) for k, l in labels if c.get(k)]
     if mine:
-        h += '<section class="mine"><h2>In my words</h2>'
+        h += '<section class="mine">'
         for l, t in mine:
-            h += f"<h3>{l}</h3><p>{e(t)}</p>"
+            h += f"<h2>{l}</h2><p>{e(t)}</p>"
         h += "</section>"
     links = [f'<a href="{GH}{p["slug"]}">Source on GitHub</a>']
     if p["kind"] == "app":
