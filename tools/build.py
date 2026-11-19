@@ -11,8 +11,8 @@ DIST = ROOT / "dist"
 projects = json.loads((ROOT / "src/projects.json").read_text())
 content = json.loads((ROOT / "src/content.json").read_text())
 e = html.escape
-KIND = {"app": "macOS apps", "notation": "Notation systems", "demo": "Demo effects"}
-KIND_ONE = {"app": "macOS app", "notation": "Notation system", "demo": "Demo effect"}
+KIND = {"app": "macOS apps", "notation": "Notation systems", "demo": "Demo effects", "skills": "AI skills"}
+KIND_ONE = {"app": "macOS app", "notation": "Notation system", "demo": "Demo effect", "skills": "AI skills"}
 GH = "https://github.com/nvictor/"
 
 if DIST.exists():
@@ -68,11 +68,11 @@ def write(rel, text):
     f.write_text(text)
 
 stand = [p for p in projects if p.get("standout")]
-body = ('<h1>Apps, notations, and demos</h1>'
-        '<p class="lead">macOS apps, notation systems, and TIC-80 demo effects.</p>'
+body = ('<h1>Apps, notations, demos, and skills</h1>'
+        '<p class="lead">macOS apps, notation systems, TIC-80 demo effects, and AI agent skills.</p>'
         '<h2>Standouts</h2><ul class="grid">' + "".join(card(p, 0) for p in stand) + '</ul>'
         '<p><a href="projects/index.html">See all %d projects</a></p>' % len(projects))
-write("index.html", page("nvictor", body, 0, "macOS apps, notation systems, and TIC-80 demo effects."))
+write("index.html", page("nvictor", body, 0, "macOS apps, notation systems, TIC-80 demo effects, and AI agent skills."))
 
 body = '<h1>All projects</h1>'
 for k, label in KIND.items():
