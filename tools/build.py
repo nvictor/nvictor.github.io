@@ -19,6 +19,7 @@ if DIST.exists():
     shutil.rmtree(DIST)
 (DIST / "assets").mkdir(parents=True)
 shutil.copy(ROOT / "src/style.css", DIST / "assets/style.css")
+shutil.copy(ROOT / "src/favicon.svg", DIST / "assets/favicon.svg")
 
 for p in projects:
     m = p.get("media")
@@ -41,6 +42,7 @@ def page(title, body, depth, desc):
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>{e(title)}</title>
 <meta name="description" content="{e(desc)}">
+<link rel="icon" href="{b}assets/favicon.svg" type="image/svg+xml">
 <link rel="stylesheet" href="{b}assets/style.css">
 </head>
 <body>
