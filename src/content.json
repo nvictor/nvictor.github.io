@@ -4,10 +4,10 @@
   "decisions": "I wanted it to be hands-off. No collections, no groupings. I wanted it to sort a custom \"Recent\" folder.",
   "lessons": "The only way to talk to the browser and edit bookmarks is through an extension, so Maruko also ships a browser extension."
  },
- "jiraiya": {
-  "problem": "I needed a clear picture of my Jira epics. It needed to be fast.",
-  "decisions": "It copies stories to a local database.",
-  "lessons": "I haven't used Jiraiya in a minute. I don't think the idea scales."
+ "mermaido": {
+  "problem": "I write Mermaid diagrams all the time. I wanted a fast, native place to edit the code and see the diagram right away, without a browser tab.",
+  "decisions": "Keep it small: one editor, one preview. Pan, zoom, dark mode, and a way to step through a sequence diagram message by message.",
+  "lessons": "Mermaid loads from a CDN, so Mermaido needs a connection. Bundling it would fix that. A small tool that does one thing is easy to keep using."
  },
  "clustermap": {
   "problem": "After playing with treemaps, I thought they could help describe a Kubernetes cluster at a glance (restarts, CPU and memory consumption, and so on).",
