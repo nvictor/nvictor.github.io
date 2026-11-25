@@ -9,7 +9,6 @@ args = ap.parse_args()
 MEDIA = ROOT / "src/media"
 DIST = ROOT / "dist"
 projects = json.loads((ROOT / "src/projects.json").read_text())
-content = json.loads((ROOT / "src/content.json").read_text())
 e = html.escape
 KIND = {"app": "macOS apps", "notation": "Notation systems", "demo": "Demo effects", "skills": "AI skills"}
 KIND_ONE = {"app": "macOS app", "notation": "Notation system", "demo": "Demo effect", "skills": "AI skills"}
@@ -100,14 +99,6 @@ for p in projects:
         h += f"<p>{e(n)}</p>"
     if p.get("requirements"):
         h += f'<p>Requires {e(p["requirements"])}</p>'
-    c = content.get(p["slug"], {})
-    labels = [("problem", "The problem"), ("decisions", "Key design decisions"), ("lessons", "Lessons learned")]
-    mine = [(l, c[k]) for k, l in labels if c.get(k)]
-    if mine:
-        h += '<section class="mine">'
-        for l, t in mine:
-            h += f"<h2>{l}</h2><p>{e(t)}</p>"
-        h += "</section>"
     links = [f'<a href="{GH}{p["slug"]}">Source on GitHub</a>']
     if p["kind"] == "app":
         links.insert(0, f'<a href="{GH}{p["slug"]}/releases/latest">Download the latest release</a>')

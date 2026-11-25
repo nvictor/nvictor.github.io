@@ -15,5 +15,4 @@ h2{margin-top:2rem}.lead{font-size:1.15rem;color:var(--muted)}
 .card:hover{outline:2px solid var(--accent)}.card span:last-child{color:var(--muted);font-size:.9rem}
 figure{margin:1.5rem 0}img{max-width:100%;height:auto;border-radius:10px;border:1px solid var(--line)}
 pre{background:var(--card);padding:12px;border-radius:8px;overflow-x:auto}
-.mine{border-left:4px solid var(--accent);padding-left:16px;margin-top:2rem}
 footer{color:var(--muted);padding:32px 16px;font-size:.9rem}
